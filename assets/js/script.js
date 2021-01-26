@@ -30,11 +30,23 @@ let dental = [
 
 
 //Mostrar por pantalla la cantidad de consultas por cada listado (utilizar la propiedad length para ésto).
+let txtTotales = document.getElementById("txt-totales");
+txtTotales.innerHTML = (`Cantidad de atenciones para Radiología : ${radiologia.length} <br>`);
+txtTotales.innerHTML = txtTotales.innerHTML + (`Cantidad de atenciones para Traumoatologia : ${traumoatologia.length} <br>`);
+txtTotales.innerHTML = txtTotales.innerHTML + (`Cantidad de atenciones para Dental : ${dental.length} <br>`);
 
-document.getElementById("p1").innerHTML = "New text!";
-document.getElementById("txt").innerHTML = "Paragraph changed!";
 
 
-console.log("radiologia:" + radiologia);
-console.log("traumoatologia:" + traumoatologia);
-console.log("dental:" + dental);
+//Mostrar por pantalla la primera y última atención de cada listado, desplegando el rut del paciente junto con la previsión, separados por un guión.
+let txtPrimerAtencion = document.getElementById("txt-primer-atencion");
+txtPrimerAtencion.innerHTML = (`Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: Ana Gálvez - Isapre. <br>`);
+txtPrimerAtencion.innerHTML = txtPrimerAtencion.innerHTML + (`Primera atención de Traumoatologia : ${traumoatologia.length} <br>`);
+txtPrimerAtencion.innerHTML = txtPrimerAtencion.innerHTML + (`Primera atención de Dental : ${dental.length} <br>`);
+
+
+
+//Mostrar por pantalla la primera y última atención de cada listado, desplegando el rut del paciente junto con la previsión, separados por un guión.
+let txtUltimaAtencion = document.getElementById("txt-ultima-atencion");
+txtUltimaAtencion.innerHTML = (`Última atención de Radiologia : ${radiologia.length} <br>`);
+txtUltimaAtencion.innerHTML = txtUltimaAtencion.innerHTML + (`Última atención de Traumoatologia : ${traumoatologia.length} <br>`);
+txtUltimaAtencion.innerHTML = txtUltimaAtencion.innerHTML + (`Primera atención de Dental : ${dental.length} <br>`);
